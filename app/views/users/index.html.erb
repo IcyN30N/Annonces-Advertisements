@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<section class="row text-center">
+  <h1 class="col-lg-12">Utilisateurices (<%= @how_many_users %>)</h1>
+  <div class="col-lg-4">
+  </div>
+  <%= link_to 'Créer un-e utilisateurice', new_user_path, class:"perso-link col-lg-4" %>
+  <div class="col-lg-4">
+  </div>
+</section>
+<section class="row content-row">
+  <% @users.each do |user| %>
+    <div class="col-lg-4 text-center">
+      <h2><%= user.name %></h2>
+      <p><%= user.password %></p>
+      <p><%= user.role %></p>
+      <p><%= link_to "détails", user, class: 'perso-link btn btn-default' %></p>
+    </div>
+  <% end %>
+</section>

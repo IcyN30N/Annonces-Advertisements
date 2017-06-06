@@ -1,0 +1,67 @@
+// importing what we need to make Bootstrap works
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700i')
+
+// colors
+$text-color: #0075B2
+$sec-text-color: #f39c12
+$dark-text-color: #2c3e50
+$bg-color: white
+$sec-bg-color: #ecf0f1
+
+// generic things
+body
+  color: $text-color
+  background-color: $bg-color
+  margin: 0 0 0 0
+  padding: 0 0 0 0
+  font-size: 2em
+  font-family: "Lato"
+  h1
+    margin-top: 3%
+    font-size: 5rem
+    font-weight: bold
+  h2
+    color: $sec-text-color
+
+
+// links
+a
+  color: $dark-text-color !important
+
+a:hover
+  color: darken($dark-text-color,25%) !important
+  text-decoration: none
+
+.perso-link, .perso-link:visited
+  color: #0075B2 !important
+  transition: 0.5s
+.perso-link:hover, .perso-link:active
+  color: $sec-text-color !important
+  transition: 0.80s
+
+
+  // landing page
+.big-header
+  margin-top: 1%
+  padding: 17% 0% 22% 0%
+  background: url("https://images.unsplash.com/photo-1485207909670-0d006b37596f?dpr=1&auto=format&fit=crop&w=3000&h=1860&q=80&cs=tinysrgb&crop=&bg=") center fixed
+
+.showcase
+  background-color: $sec-bg-color
+  padding: 3.5% 0% 2% 4%
+  border-bottom: 44px $dark-text-color solid
+  margin-bottom: 1.1%
+  div
+    h2
+      margin-bottom: 4.5%
+
+.content-row
+  div
+    margin-top: 1.6%
+    h2
+      margin-bottom: 3%
+    p
+      margin-bottom: 2.3%

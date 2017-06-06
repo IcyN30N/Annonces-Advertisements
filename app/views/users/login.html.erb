@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<p> <%= flash[:need_to_connect] %> </p>
+<%= form_tag "/users/login", method: :post do %>
+  <label>Nom</label>
+  <input type="text" name="name" placeholder="RichardTichaud"/>
+  <label>Mot de passe</label>
+  <input type="password" name="password" placeholder="MonMotDePasse"/>
+  <input type="submit" value="login">
+<% end %>

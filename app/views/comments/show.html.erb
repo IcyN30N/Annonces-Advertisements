@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<section class="row text-center">
+  <h1 class="col-lg-12"><%= @comment.user_id %> :</h1>
+</section>
+<section class="row content-row text-center">
+  <div class="col-lg-12">
+    <h2>contenu : <%= @comment.content %></h2>
+  </div>
+  <%= link_to 'Edit', edit_comment_path(@comment), class: "perso-link" %> |
+  <%= link_to 'Back', comments_path, class: "perso-link" %>
+</section>

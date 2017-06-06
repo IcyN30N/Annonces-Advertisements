@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<section class="row text-center">
+  <h1 class="col-lg-12">Annonce <%= @advertisement.id %> :</h1>
+</section>
+<section class="row content-row text-center">
+  <div class="col-lg-12">
+    <h2><%= @advertisement.title %></h2>
+    <p><%= @advertisement.price %> euros</p>
+    <p><strong>Contenu :</strong> <%= @advertisement.content %></p>
+    <p><strong>Postée par :</strong> <%= @advertiser.name %>
+  </p>
+</section>
+
+<% unless @advertisement.published %>
+<%= button_to "Publier", advertisement_path(@advertisement, :advertisement => {:published => true}), :method => :put%>
+<% end %>
+
+
+<section class="row text-center">
+  <h2>Commentaires</h2>
+  <% @comments.each do |c| %>
+    <div>
+      <p><%= User.find(c.user_id).name %> | <%= c.content %></p>
+    </div>
+    <% end %>
+</section>
+<% unless session[:user_id] == nil  %>
+  <%= render 'comments_form' %>
+<% end %>

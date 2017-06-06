@@ -1,0 +1,15 @@
+<%= form_for @comment do |f| %>
+
+  <div class="field">
+    <%= f.number_field :advertisement_id, :value => @advertisement.id, :hidden => true%>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

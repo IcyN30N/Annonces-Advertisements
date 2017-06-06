@@ -1,0 +1,11 @@
+<% if defined? @current_user.name %>
+  <li class="col-lg-3 text-center"><a><%=@current_user.name %></a></li>
+  <li class="col-lg-3 text-center"><%= link_to "Accueil", "/", class: 'perso-link' %></li>
+  <li class="col-lg-3 text-center"><%= link_to "Annonces", advertisements_path, class: 'perso-link' %></li>
+  <li class="col-lg-3 text-center"><%= link_to "Déconnexion", "#{users_path}/logout", class: 'perso-link' %></li>
+
+<% else %>
+  <li class="col-lg-4 text-center"><%= link_to "Accueil", "/", class: 'perso-link' %></li>
+  <li class="col-lg-4 text-center"><%= link_to "Annonces", advertisements_path, class: 'perso-link' %></li>
+  <li class="col-lg-4 text-center"><%= link_to "Connexion", "#{users_path}/login", class: 'perso-link' %></li>
+<% end %>
