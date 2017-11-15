@@ -22875,3 +22875,398 @@ Processing by AdvertisementsController#landing as HTML
 Completed 200 OK in 1442ms (Views: 1440.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/advertisements/" for 127.0.0.1 at 2017-11-15 00:20:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdvertisementsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."published" = ?[0m  [["published", "t"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_nav.html.erb (0.8ms) [cache miss]
+Completed 200 OK in 286ms (Views: 267.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:20:11 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 94ms (Views: 76.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:20:24 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."published" = ?[0m  [["published", "t"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_nav.html.erb (1.3ms) [cache miss]
+Completed 200 OK in 88ms (Views: 84.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2017-11-15 00:20:26 +0100
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 50ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-11-15 00:20:36 +0100
+Processing by UsersController#login_check as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"05bSFe9gQLd37rrCBiV3Qig6AwYVEhJdvu+YqTsiIrYH7QgUX4h22fWNMyWY+iHhpHRDkeDV58VsM/kHdDbx4A==", "name"=>"RichardTichaud", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "RichardTichaud"], ["password", "tomato"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2017-11-15 00:20:36 +0100
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:20:39 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:20:40 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:20:41 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."published" = ?[0m  [["published", "t"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_nav.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2017-11-15 00:20:46 +0100
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Tom Ato"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Tom Ato"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Admin"], ["LIMIT", 11]]
+Started POST "/users/login" for 127.0.0.1 at 2017-11-15 00:27:10 +0100
+Processing by UsersController#login_check as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"31+8bAK0QKzgKeAXzcGqjvst8VsIFjBHsh3eQLvikogLJGZtslx2wmJKafBTHvwtd2OxzP3Rxd9gwb/u9PZB3g==", "name"=>"Admin", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Admin"], ["password", "admin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/advertisements
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:27:10 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_nav.html.erb (1.3ms) [cache miss]
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/advertisements/4" for 127.0.0.1 at 2017-11-15 00:27:15 +0100
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."advertisement_id" = ?[0m  [["advertisement_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/_comments_form.html.erb (17.3ms) [cache miss]
+  Rendered advertisements/show.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_nav.html.erb (1.0ms) [cache miss]
+Completed 200 OK in 87ms (Views: 74.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2017-11-15 00:27:24 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9PgP0XA45iCFwoeTjR2pA6ZWG6fJYTfxyKSRke60J2m8umMUJ5CPTXbrMrakkvttD5VKlEtpwW8JXqnCmiozg==", "comment"=>{"advertisement_id"=>"4", "content"=>"Du calme ici !"}, "commit"=>"Create Comment"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "content", "created_at", "updated_at", "advertisement_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 11], ["content", "Du calme ici !"], ["created_at", "2017-11-14 23:27:24.334476"], ["updated_at", "2017-11-14 23:27:24.334476"], ["advertisement_id", 4]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/advertisements
+Completed 302 Found in 29ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:27:24 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_nav.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/advertisements/4" for 127.0.0.1 at 2017-11-15 00:27:26 +0100
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."advertisement_id" = ?[0m  [["advertisement_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered advertisements/_comments_form.html.erb (1.3ms) [cache miss]
+  Rendered advertisements/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav.html.erb (1.7ms) [cache miss]
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:27:37 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav.html.erb (1.2ms) [cache miss]
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:27:38 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_nav.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:27:42 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav.html.erb (1.0ms) [cache miss]
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:27:42 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:27:52 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_nav.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 67ms (Views: 63.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2017-11-15 00:27:54 +0100
+Processing by UsersController#logout as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-11-15 00:27:54 +0100
+Processing by UsersController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Redirected to http://localhost:3000/advertisements
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:27:54 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.4ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."published" = ?[0m  [["published", "t"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms) [cache miss]
+Completed 200 OK in 90ms (Views: 87.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2017-11-15 00:27:57 +0100
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav.html.erb (0.9ms) [cache miss]
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-11-15 00:28:07 +0100
+Processing by UsersController#login_check as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EeK0R2tiG7PalaUiqcG1bDdATuticCb+pNrVmeFQ/evFmW5G24ot3Vj2LMU3HuPPuw4OfJe302Z2BrQ3rkQuvQ==", "name"=>"Dingo", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Dingo"], ["password", "12"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/advertisements
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:28:07 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."published" = ?[0m  [["published", "t"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_nav.html.erb (0.9ms) [cache miss]
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/advertisements/new" for 127.0.0.1 at 2017-11-15 00:28:11 +0100
+Processing by AdvertisementsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering advertisements/new.html.erb within layouts/application
+  Rendered advertisements/_form.html.erb (2.8ms) [cache miss]
+  Rendered advertisements/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_nav.html.erb (0.8ms) [cache miss]
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/advertisements" for 127.0.0.1 at 2017-11-15 00:28:17 +0100
+Processing by AdvertisementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements" WHERE "advertisements"."published" = ?[0m  [["published", "t"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered advertisements/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav.html.erb (0.9ms) [cache miss]
+Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:28:18 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav.html.erb (1.5ms) [cache miss]
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 00:28:18 +0100
+Processing by AdvertisementsController#landing as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  Rendering advertisements/landing.html.erb within layouts/application
+  Rendered advertisements/landing.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
