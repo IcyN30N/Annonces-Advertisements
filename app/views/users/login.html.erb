@@ -1,5 +1,6 @@
 <h1>Login</h1>
 <p> <%= flash[:need_to_connect] %> </p>
+<p class="col-lg-12"> <%= flash[:notice] %> </p>
 <%= form_tag "/users/login", method: :post do %>
   <label>Nom</label>
   <input type="text" name="name" placeholder="RichardTichaud"/>
