@@ -7,9 +7,8 @@
 // colors
 $text-color: #0075B2
 $sec-text-color: #f39c12
-$dark-text-color: #2c3e50
-$bg-color: white
-$sec-bg-color: #ecf0f1
+$dark-text-color: #373736
+$bg-color: #ecf0f1
 
 // generic things
 body
@@ -26,6 +25,20 @@ body
   h2
     color: $sec-text-color
 
+
+  footer
+    background-color: $dark-text-color
+    padding: 1.5% 0% 0.6% 0%
+    margin-top: 3%
+
+    p
+      transition: .5s
+      border-color: $dark-text-color
+    p:hover
+      border-left: solid 3px $bg-color
+      border-right: solid 3px $bg-color
+      letter-spacing: 1.7px
+      transition: 1.3s
 
 // links
 a
@@ -45,15 +58,14 @@ a:hover
 
   // landing page
 .big-header
+  h1
+    font-size: 3em
   margin-top: 1%
-  padding: 17% 0% 22% 0%
+  padding: 19% 0% 25% 0%
   background: url("https://images.unsplash.com/photo-1485207909670-0d006b37596f?dpr=1&auto=format&fit=crop&w=3000&h=1860&q=80&cs=tinysrgb&crop=&bg=") center fixed
 
 .showcase
-  background-color: $sec-bg-color
   padding: 3.5% 0% 2% 4%
-  border-bottom: 44px $dark-text-color solid
-  margin-bottom: 1.1%
   div
     h2
       margin-bottom: 4.5%
