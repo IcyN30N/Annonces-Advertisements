@@ -2,7 +2,7 @@ class AdvertisementsController < ApplicationController
   before_action :set_advertisement, only: [:show, :edit, :update, :destroy]
 
   def landing
-    @how_many_published_ad = Advertisement.where(:published => true).count
+    @how_many_published_ads = Advertisement.where(:published => true).count
     @how_many_com = Comment.count
   end
 
@@ -10,7 +10,7 @@ class AdvertisementsController < ApplicationController
   # GET /advertisements.json
   # checking what's the user's role to see if they can have access to unpublished stuff
   def index
-    @how_many_published_ad = Advertisement.where(:published => true).count
+    @how_many_published_ads = Advertisement.where(:published => true).count
     if @current_user != nil && @current_user.role == 'admin'
       @advertisements = Advertisement.all
     else
