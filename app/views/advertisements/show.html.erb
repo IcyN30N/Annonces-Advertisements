@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<section class="row text-center">
-  <h1 class="col-lg-12">Annonce <%= @advertisement.id %> :</h1>
-</section>
+<h1 class="text-center"><%= @advertisement.title.capitalize %></h1>
+
 <section class="row content-row text-center">
   <div class="col-lg-12">
-    <h2><%= @advertisement.title %></h2>
-    <p><%= @advertisement.price %> euros</p>
+    <p class="popout"><strong>Prix :</strong> <%= @advertisement.price %> euros</p>
+    <p><strong>Date de création :</strong> <%= @advertisement.created_at %></p>
     <p><strong>Contenu :</strong> <%= @advertisement.content %></p>
     <p><strong>Postée par :</strong> <%= @advertiser.name %>
   </p>
@@ -16,12 +15,13 @@
 <%= button_to "Publier", advertisement_path(@advertisement, :advertisement => {:published => true}), :method => :put%>
 <% end %>
 
+<div class="separator"></div>
 
 <section class="row text-center">
-  <h2>Commentaires</h2>
+  <h2 id="comments-section">Commentaires</h2>
   <% @comments.each do |c| %>
-    <div>
-      <p><%= User.find(c.user_id).name %> | <%= c.content %></p>
+    <div class="comment-container">
+      <p class="comment">Posté par : <strong><%= User.find(c.user_id).name %></strong> | <%= c.content.capitalize %></p>
     </div>
     <% end %>
 </section>
