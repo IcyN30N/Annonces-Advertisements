@@ -14,7 +14,7 @@
     <div class="col-lg-4 text-center">
       <h2><%= advertisement.title %> | <%= @advertiser.name %> </h2>
       <p><%= advertisement.price %> euros</p>
-      <p><%= advertisement.content %></p>
+      <p><%= advertisement_content_checker(advertisement.content) %></p>
       <p><%= link_to "détails", advertisement, class: 'perso-link btn btn-default' %></p>
     </div>
   <% end %>

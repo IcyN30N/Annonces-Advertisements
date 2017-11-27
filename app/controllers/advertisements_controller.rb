@@ -1,5 +1,6 @@
 class AdvertisementsController < ApplicationController
   before_action :set_advertisement, only: [:show, :edit, :update, :destroy]
+  helper_method :advertisement_content_checker
 
   def landing
     @how_many_published_ads = Advertisement.where(:published => true).count
@@ -89,6 +90,17 @@ class AdvertisementsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to advertisements_url, notice: 'Advertisement was successfully destroyed.' }
     end
+  end
+
+  def advertisement_content_checker advertisement_content
+    checked_advertisement_content = ""
+    splitted_advertisement_content = advertisement_content.split(' ')
+    if splitted_advertisement_content.count > 10
+      checked_advertisement_content = splitted_advertisement_content.slice(0,10).push("...").join(' ')
+    else
+      checked_advertisement_content = advertisement_content
+    end
+    checked_advertisement_content
   end
 
   private
